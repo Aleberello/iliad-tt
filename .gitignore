@@ -1,0 +1,58 @@
+# Python
+*.py[cod]
+__pycache__/
+*.so
+
+# Django
+*.log
+db.sqlite3
+db.sqlite3-journal
+
+# Virtual environment
+venv/
+env/
+
+# IDEs and editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Configuration files
+*.ini
+*.conf
+
+# Media and static files (if managed separately)
+/media
+/static
+
+# Compiled files
+*.pyc
+*.pyo
+*.pyd
+
+# Backup files
+*.bak
+
+# Log files
+*.log
+
+# Cache files
+.cache/
+
+# Temporary files
+*.tmp
+
+# Secrets
+secrets.json
+.env.production
+
+# Certificates
+*.pem
+*.key
+*.crt

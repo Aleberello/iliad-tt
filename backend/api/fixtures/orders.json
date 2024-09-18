@@ -1,0 +1,26 @@
+[
+    {
+      "model": "api.order",
+      "pk": 1,
+      "fields": {
+        "name": "ORD-001",
+        "description": "Manual order",
+        "date": "2024-09-15",
+        "products": [1, 2],
+        "created_at": "2024-09-18T09:59:00Z",
+        "updated_at": "2024-09-18T09:59:00Z"
+      }
+    },
+    {
+      "model": "api.order",
+      "pk": 2,
+      "fields": {
+        "name": "ORD-002",
+        "description": "Recurrent order",
+        "date": "2024-09-16",
+        "products": [2, 3],
+        "created_at": "2024-09-18T09:59:00Z",
+        "updated_at": "2024-09-18T09:59:00Z"
+      }
+    }
+  ]

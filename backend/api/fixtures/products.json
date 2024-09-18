@@ -1,0 +1,32 @@
+[
+    {
+      "model": "api.product",
+      "pk": 1,
+      "fields": {
+        "name": "Laptop",
+        "price": "999.29",
+        "created_at": "2024-09-18T09:59:00Z",
+        "updated_at": "2024-09-18T09:59:00Z"
+      }
+    },
+    {
+      "model": "api.product",
+      "pk": 2,
+      "fields": {
+        "name": "Smartphone",
+        "price": "699.99",
+        "created_at": "2024-09-18T09:59:00Z",
+        "updated_at": "2024-09-18T09:59:00Z"
+      }
+    },
+    {
+      "model": "api.product",
+      "pk": 3,
+      "fields": {
+        "name": "Headphones",
+        "price": "199.99",
+        "created_at": "2024-09-18T09:59:00Z",
+        "updated_at": "2024-09-18T09:59:00Z"
+      }
+    }
+  ]
