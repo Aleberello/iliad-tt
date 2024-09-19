@@ -1,0 +1,19 @@
+erDiagram
+    Product {
+        int id PK
+        string name
+        decimal price
+        datetime created_at
+        datetime updated_at
+        datetime deleted_at
+    }
+    Order {
+        int id PK
+        string name
+        string description
+        date date
+        datetime created_at
+        datetime updated_at
+        datetime deleted_at
+    }
+    Order ||--|{ Product : "contains at least one"

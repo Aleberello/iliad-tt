@@ -27,10 +27,6 @@ Thumbs.db
 *.ini
 *.conf
 
-# Media and static files (if managed separately)
-/media
-/static
-
 # Compiled files
 *.pyc
 *.pyo

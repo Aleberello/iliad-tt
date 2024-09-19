@@ -1,0 +1,28 @@
+classDiagram
+    class BaseModel {
+        <<abstract>>
+        +DateTimeField created_at
+        +DateTimeField updated_at
+        +DateTimeField deleted_at
+        +delete()
+        +restore()
+        +is_deleted()
+    }
+    class SoftDeleteManager {
+        +get_queryset()
+    }
+    class Product {
+        +CharField name
+        +DecimalField price
+        +__str__()
+    }
+    class Order {
+        +CharField name
+        +CharField description
+        +DateField date
+        +__str__()
+    }
+    BaseModel <|-- Product
+    BaseModel <|-- Order
+    BaseModel --> SoftDeleteManager : uses
+    Order "0..*" --> "1..*" Product : contains
