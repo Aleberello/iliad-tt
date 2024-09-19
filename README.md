@@ -31,10 +31,10 @@ The schema is mainly composed of two tables, in a many-to-many relationship:
 Compared to the proposed base structure, changes were made to improve data management.
 In particular, taking advantage of Django Models and the inheritance of a specific base class, the fields *created_at*, *updated_at*, and *deleted_at* were added to both tables, also implementing a **soft delete** mechanism. Thanks to this, it's possible to obtain more structured data and ensure the preservation of the order history even in case of deletion of a product.
 
-<img src="docs/db_class_diagram.png" alt="drawing" width="400"/>
+<img src="docs/db_class_diagram.png" alt="drawing" width="300"/>
 
 ### Functionalities
-In addition to the basic REST APIs available for both described entities, the system supports:
+In addition to the basic REST APIs available for both described entities, available at `api/` root, the system supports:
 * **Soft delete** - the deletion of a record does not occur directly on the database but by valuing an indicator: the *deleted_at*. The system is set up to display only active records by filtering those with *deleted_at* valued. The only exception concerns the display of orders in which associated products that have been subsequently deleted are also shown.
 An API is also provided to restore deleted records.
 * **Pagination** - configured globally for all APIs, with a default of 100 elements per single page.
@@ -50,7 +50,9 @@ To correctly start the project, the following system dependencies are necessary:
 * Make library (optional)
 
 ### Configuration
+A lightweight containerization is provided to develope and execute the entire project, using Docker Compose.
 The project is configured so that the Django server container is started only after the correct start of the database container. At each start, the database migration and static collect operations are also performed (refer to the `entrypoint.sh` file for further details).
+All the packages dependencies required can be finded in the `requirements.txt` file.
 
 Note: For the purposes of the project, a production setup for deployment is not provided, but only the internal Django development server is used. To this end, it is necessary to extend the configuration to include WSGI and NGINX, as well as separate management of environment variables.
 
@@ -85,7 +87,7 @@ To manage Docker and Django commands, a Makefile is provided. For all other avai
    make build
    make up
    ```
-   This command will start Django server and Postgres services defined in the `docker-compose.yml` file, serving the application in debug mode at the address [http://localhost:8000](http://localhost:8000).
+   This command will start Django server and Postgres services defined in the `docker-compose.yml` file, serving the application in debug mode at the address [http://localhost:8000/api](http://localhost:8000/api).
 
 4. **Create Django superuser**: Create the superuser for the Django admin panel
    ```bash
