@@ -31,7 +31,7 @@ The schema is mainly composed of two tables, in a many-to-many relationship:
 Compared to the proposed base structure, changes were made to improve data management.
 In particular, taking advantage of Django Models and the inheritance of a specific base class, the fields *created_at*, *updated_at*, and *deleted_at* were added to both tables, also implementing a **soft delete** mechanism. Thanks to this, it's possible to obtain more structured data and ensure the preservation of the order history even in case of deletion of a product.
 
-![DB Class Diagram](docs/db_class_diagram.svg)
+<img src="docs/db_class_diagram.png" alt="drawing" width="400"/>
 
 ### Functionalities
 In addition to the basic REST APIs available for both described entities, the system supports:
